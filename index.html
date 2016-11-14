@@ -151,6 +151,14 @@
             scene.fog = new THREE.FogExp2( 0x111115, 0.0128 );
             renderer.setClearColor( scene.fog.color, 1 );
             document.body.appendChild( renderer.domElement );
+            
+            function onWindowResize() {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            }
+            window.addEventListener('resize', onWindowResize, false);
 
 
             particles = new genParticles();

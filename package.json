@@ -1,0 +1,22 @@
+{
+  "name": "spiral",
+  "version": "1.0.0",
+  "description": "The seed for the orbitals project.",
+  "main": "three.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kshaa/spiral.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kshaa/spiral/issues"
+  },
+  "homepage": "https://github.com/kshaa/spiral#readme",
+  "dependencies": {
+    "three": "^0.82.1"
+  }
+}

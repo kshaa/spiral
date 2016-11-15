@@ -9,7 +9,8 @@
         </style>
     </head>
     <body>
-        <script src="three.min.js"></script>
+        <script src="node_modules/three/build/three.min.js"></script>
+        <script src="node_modules/three/examples/js/controls/OrbitControls.js"></script>
         <script>
             /*
             Constants
@@ -151,7 +152,18 @@
             scene.fog = new THREE.FogExp2( 0x111115, 0.0128 );
             renderer.setClearColor( scene.fog.color, 1 );
             document.body.appendChild( renderer.domElement );
+
+            controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.7;
+            controls.enableZoom = true;
+            controls.enableKeys = false;
             
+            var grid = new THREE.GridHelper (20, 10, 0xabaaaa, 0x444444);
+            grid.position.y = -2;
+            grid.rotation.y = 2;
+            scene.add(grid);
+
             function onWindowResize() {
                 camera.aspect = window.innerWidth / window.innerHeight;
                 camera.updateProjectionMatrix();

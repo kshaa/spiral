@@ -1,2 +1,2 @@
-# spiral
-The seed for the orbitals project.
+# Spiral
+A swiftly written project to test out Three.js webgl framework.
